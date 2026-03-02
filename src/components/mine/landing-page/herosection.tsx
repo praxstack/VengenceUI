@@ -8,6 +8,7 @@ import { FlipText } from "@/components/ui/flip-text";
 import { NeutralHeroBackground } from "@/components/mine/landing-page/neutral-hero-background";
 import { BorderBeam } from "@/components/ui/border-beam";
 
+
 export const HeroSection = () => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -49,6 +50,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
             className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-100/50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 text-xs font-medium text-zinc-600 dark:text-zinc-100 mb-8 backdrop-blur-sm shadow-sm overflow-hidden"
           >
+            <VercelOSSProgramBadge/>
             <BorderBeam
               size={40}
               duration={3}
@@ -67,14 +69,7 @@ export const HeroSection = () => {
               colorTo="transparent"
               className="hidden dark:block"
             />
-
-            <motion.div animate={{ rotate: [0, 15, -15, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 text-black dark:text-white">
-                <path d="M22 2L12 22L2 2" />
-              </svg>
-            </motion.div>
-            <span className="tracking-widest uppercase text-zinc-500 dark:text-zinc-400 z-10">Vengeance UI 2.0</span>
-          </motion.div>
+ </motion.div>
 
           {/* Headline */}
           <motion.div
@@ -122,3 +117,10 @@ export const HeroSection = () => {
     </section>
   );
 };
+
+
+export const VercelOSSProgramBadge = () =>{
+    return(
+        <a className="flex h-8 items-center gap-2 rounded-full bg-zinc-50 px-4 text-sm font-medium dark:bg-white/5"  target="_blank" rel="noopener"><span className="text-muted-foreground">Backed by</span><span>▲Vercel OSS Program</span></a>
+    )
+}
