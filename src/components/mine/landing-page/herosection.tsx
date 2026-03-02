@@ -69,15 +69,7 @@ export const HeroSection = () => {
               colorTo="transparent"
               className="hidden dark:block"
             />
-
-           
-            <motion.div animate={{ rotate: [0, 15, -15, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 text-black dark:text-white">
-                <path d="M22 2L12 22L2 2" />
-              </svg>
-            </motion.div>
-            <span className="tracking-widest uppercase text-zinc-500 dark:text-zinc-400 z-10">Vengeance UI 2.0</span>
-          </motion.div>
+ </motion.div>
 
           {/* Headline */}
           <motion.div
@@ -127,10 +119,8 @@ export const HeroSection = () => {
 };
 
 
-
-
 export const VercelOSSProgramBadge = () =>{
     return(
-        <a className="flex h-8 items-center gap-2 rounded-full bg-zinc-50 px-4 text-sm font-medium dark:bg-white/5" href="https://vercel.com/blog/summer-2025-oss-program?utm_source=react-wheel-picker&amp;utm_medium=web#react-wheel-picker" target="_blank" rel="noopener"><span className="text-muted-foreground">Backed by</span><span>▲Vercel OSS Program</span></a>
+        <a className="flex h-8 items-center gap-2 rounded-full bg-zinc-50 px-4 text-sm font-medium dark:bg-white/5"  target="_blank" rel="noopener"><span className="text-muted-foreground">Backed by</span><span>▲Vercel OSS Program</span></a>
     )
 }
